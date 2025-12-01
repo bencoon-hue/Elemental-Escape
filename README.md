@@ -1,152 +1,144 @@
-## Elemental Escape
+# Elemental Rush (3D Endless Runner)
 
-Elemental Escape is a fast-paced 2D survival game where the player dodges falling elemental hazards while collecting crystals for points. Inspired by the “Fruit Frenzy” mechanic, the game ramps up in difficulty over time and rewards skillful movement, quick reactions, and strategic combo-building.
+**Elemental Rush** is a 3D endless runner built in Unity. The player navigates a constantly evolving world filled with obstacles, elemental traps, and collectible orbs. The objective is to survive as long as possible while the world becomes faster and more challenging.
 
-### Gameplay Overview
+---
 
-Control a character running across a hazardous environment.
+## Gameplay Overview
 
-Avoid falling elemental hazards:
-Fire, Water, Earth, and Air.
+- The player runs forward automatically.
+- Move **left**, **right**, and **jump** to avoid obstacles.
+- Collect **elemental orbs** to increase your score.
+- Ground tiles spawn and despawn dynamically for an endless world.
+- Difficulty increases over time as speed ramps up.
+- Rare power-ups appear to assist the player.
 
-Collect elemental crystals to score points.
+### Obstacles
+- Rolling boulders  
+- Fallen trees  
+- Fire pits  
+- Moving barriers  
 
-Survive as long as possible as hazards fall faster and in more complex patterns.
+### Power-Ups
+- **Shield** – one-hit protection  
+- **Magnet** – pulls nearby orbs  
+- **Slow Motion** – temporarily reduces game speed  
 
-Trigger bonus mechanics such as:
+---
 
-Combo scoring (collect 3 same-element crystals in a row → 2× multiplier)
+## Controls
 
-Occasional power-ups like shields or slow-motion.
+### Keyboard (PC)
+- **A / D** or **Left / Right Arrow Keys** — Move sideways  
+- **Spacebar** — Jump  
+- **Left Shift** — Activate stored power-up (optional)  
 
-### Controls
-Desktop
+### Mobile (Optional)
+- **Swipe Left / Right** — Move sideways  
+- **Swipe Up** — Jump  
 
-Left/Right Arrow or A/D: Move left and right
+---
 
-Spacebar: Activate power-up (e.g., shield)
+## Core Features
 
-Mobile (Optional)
+- 3D lane-based or free-movement endless runner
+- Procedural track generation
+- Obstacle spawn patterns with increasing complexity
+- Score system (distance + orb collection)
+- Difficulty scaling based on time/speed
+- Power-up system (shield, magnet, slow-motion)
+- High score saving
+- Clean UI with score and power-up indicators
 
-Swipe Left/Right: Move character horizontally
+---
 
-### Art Assets
+## Art Assets Needed
 
-The game requires the following assets:
+**Characters**
+- 3D player model  
+- Run, jump, and idle animations (Mixamo recommended)
 
-Player character sprite
+**Environment**
+- Ground tiles  
+- Decorative environment props  
+- Skybox  
 
-Falling hazards
+**Obstacles**
+- Rocks  
+- Logs  
+- Fire traps  
+- Barriers  
 
-Fireball
+**Collectibles**
+- Glowing orb model  
 
-Water drop
+**UI**
+- Score text  
+- High score  
+- Power-up icons  
 
-Rock
+---
 
-Wind gust
+## Audio Assets Needed
 
-Crystal collectibles
+- Orb pickup sound  
+- Obstacle collision sound  
+- Jump sound  
+- Power-up activation  
+- Ambient background audio  
 
-Backgrounds (static or tiled: desert, forest, sky)
+---
 
-UI elements
+## Game Flow
 
-Score display
+1. Player spawns at base running speed.  
+2. Procedural tiles generate endlessly ahead of the player.  
+3. Obstacles and orbs spawn with pattern variation.  
+4. Player collects orbs and avoids obstacles.  
+5. Speed increases gradually to raise difficulty.  
+6. Collision → Game Over (unless shield is active).  
+7. Final score and high score are displayed.  
+8. Player can restart instantly.  
 
-High score
+---
 
-Life bar / hearts
+## Technical Challenges
 
-Combo meter
+- Track tile procedural generation  
+- Smooth lane switching / horizontal movement  
+- Jump physics  
+- Obstacle spawn fairness  
+- Power-up logic  
+- Performance (object pooling recommended)  
 
-### Audio Assets
+---
 
-Crystal collection sound
+## Project Scope
 
-Hazard collision (life loss)
+- Single 3D environment theme  
+- 3–5 obstacle types  
+- 1–2 power-ups  
+- Basic UI for score + high score  
+- One player character with basic animations  
+- Runs on PC (mobile optional)
 
-Power-up activation
+---
 
-Combo multiplier sound
+## Deliverables
 
-Optional ambient background (no music)
+- Complete Unity 3D project  
+- GitHub repository with clean commits  
+- Short gameplay demo video  
+- Brief documentation of deviations from this plan  
 
-### Game Flow
+---
 
-Player starts with 3 lives.
+## Optional Enhancements
 
-Hazards fall at a base speed.
+- Day/night cycle  
+- Additional environments  
+- Character skins  
+- Achievements (distance milestones, orb streaks)  
+- Element-themed zones  
 
-Player collects crystals to score points.
-
-Colliding with hazards reduces a life (missing them is harmless).
-
-Every 30 seconds, hazard speed and spawn complexity increase.
-
-Game ends when all lives are lost → High score is saved.
-
-Optional: Elemental Frenzy Mode triggers at 1000 points, spawning rapid hazards and rare bonuses.
-
-### Challenges / Technical Considerations
-
-Accurate collision detection (player ↔ hazards, player ↔ crystals)
-
-Procedurally generated hazard patterns that feel fair
-
-Combo system tracking consecutive element types
-
-Balanced difficulty scaling
-
-Performance optimization as hazard count increases
-
-### Unique Features
-
-Elemental Combo System:
-Collecting 3 crystals of the same element consecutively gives a 2× score multiplier.
-
-Dynamic procedural hazard patterns
-
-Power-ups: Shield, slow-motion, etc.
-
-Visual particle effects (fire trail, water splash, dust clouds)
-
-Optional UI achievements system for extra fun
-
-### Project Scope
-
-Simple, single-scene 2D Unity game
-
-Four core hazard types with scalable difficulty
-
-Clean, functional UI (score, lives, combos)
-
-Optional background parallax for visual depth
-
-### Deliverables
-
-Complete, playable Unity project
-
-GitHub repository with neat commit history
-
-Short gameplay video demonstrating:
-
-Hazard interactions
-
-Scoring
-
-Combo system
-
-Difficulty progression
-
-A text report listing any deviations from this design document
-
-### Technologies
-
-Unity Game Engine (version optional)
-
-C# scripts
-
-Lightweight 2D assets
-
-GitHub for version control
+---
